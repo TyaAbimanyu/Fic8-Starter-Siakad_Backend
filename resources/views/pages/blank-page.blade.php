@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Blank Page Aditya')
+@section('title', 'Page Aditya')
 
 @push('style')
     <!-- CSS Libraries -->
