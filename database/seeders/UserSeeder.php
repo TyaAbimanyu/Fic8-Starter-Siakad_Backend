@@ -20,6 +20,9 @@ class UserSeeder extends Seeder
             "email"=> "adit.abi@mail.com",
             'email_verified_at'=> now(),
             "password"=> Hash::make("12345678"),
+            'roles'=> "mahasiswa",
+            'phones'=> "08123456789",
+            'address'=> "Jl. Raya No. 1",
         ]);
     }
 }
