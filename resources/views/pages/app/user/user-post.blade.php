@@ -21,12 +21,18 @@
             </div>
             <div class="section-body">
 
+                <div class="row">
+                    <div class="col-12">
+                        @include('layouts.alert')
+                    </div>
+                </div>
+
                 <div class="row mt-4">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
                                 <h4>All Users</h4>
-                                <a href="features-post-create.html"class="btn btn-primary">Add New</a>
+                                <a href="{{route('user.create')}}"class="btn btn-primary">Add New</a>
 
                             </div>
                             <div class="card-body">
@@ -67,7 +73,23 @@
                                                 </td>
                                                 <td>{{ $user->created_at }}</td>
                                                 <td>
-                                                    <div class="badge badge-primary">Edit</div>
+                                                    <div class="d-flex justify-content-start">
+                                                        <a href="{{route('user.edit', $user->id)}}" class="btn btn-sm btn-info btn-icon">
+                                                            <i class="fas fa-edit">
+                                                                Edit
+                                                            </i>
+                                                        </a>
+
+                                                        <form action="{{route('user.destroy', $user->id)}}" method="POST" class="ml-2">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-sm btn-danger btn-icon">
+                                                                <i class="fas fa-trash">
+                                                                    Delete
+                                                                </i>
+                                                            </button>
+                                                        </form>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach

@@ -13,8 +13,7 @@
                     class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a class="nav-link"
-                            href="{{ url('dashboard-general-dashboard') }}">General Dashboard</a>
+                        <a class="nav-link" href="{{ route('home') }}">General Dashboard</a>
                     </li>
                     <li>
                         <a class="nav-link"
