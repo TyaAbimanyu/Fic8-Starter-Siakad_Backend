@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\subject;
+use App\Models\Subject;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -13,6 +13,6 @@ class SubjectSeeder extends Seeder
      */
     public function run(): void
     {
-        subject::factory()->count(25)->create();
+        Subject::factory()->count(25)->create();
     }
 }
