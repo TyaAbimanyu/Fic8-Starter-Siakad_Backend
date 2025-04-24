@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SubjectSeeder::class,
             ScheduleSeeder::class,
+            ScoreSeeder::class,
+            ReportSeeder::class,
         ]);
     }
 }

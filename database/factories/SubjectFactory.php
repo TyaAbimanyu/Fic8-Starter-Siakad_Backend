@@ -18,7 +18,7 @@ class SubjectFactory extends Factory
     {
         return [
             'title' => fake()->word(),
-            'lecturer_id' => 4,
+            'lecturer_id' => fake()->numberBetween(1, 20),
         ];
     }
 }
