@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->string('roles')->after('email')->default('mahasiswa');
+            $table->enum('roles', ['admin', 'mahasiswa', 'dosen'])->after('email');
             $table->string('phones')->after('roles')->nullable();
             $table->string('address')->after('phones')->nullable();
-
         });
     }
 

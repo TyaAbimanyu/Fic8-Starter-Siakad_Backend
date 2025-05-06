@@ -17,7 +17,7 @@ class ScheduleFactory extends Factory
     public function definition(): array
     {
         return [
-            "student_id" => fake()->numberBetween(1, 101),
+            "student_id" => fake()->numberBetween(1, 46),
             'subject_id' => fake()->numberBetween(1, 25),
             'schedule_time' => fake()->dateTime(),
             'schedule_type' => $this->faker->randomElement(['online', 'offline']),
